@@ -1,0 +1,32 @@
+SEED: 1234
+
+DATA:
+  PAIR : ['a', 'b']
+  TRAIN_DIR: 'data/train/'
+  VALID_DIR: 'data/train/'
+  TEST_DIR: 'data/train/'
+
+MODEL:
+  NAME: 'Efficient'
+  CRITERIA: 'CrossEntropy'
+  OPTIMIZER: 'SAM'
+  LR: 0.01
+  MOMENTUM: 0.9
+  WEIGHT_DECAY: 0.0001
+  CHECKPOINT: 'ckpt/Efficient/220602-2212_SAM_0.01.pt'
+  IN_CHANNEL: 3
+  N_CLASSES: 11
+
+TRAIN:
+  BATCH_SIZE: 12
+  EPOCHS: 1000
+  EARLYSTOP_PATIENT: 5
+  MODEL_SAVE_PATH: 'ckpt'
+  LOGGING_SEP: '|'
+  LOGGING_SAVE_PATH: 'logs/log.txt'
+  VALID_SPLIT_SIZE: 0.2
+VALID:
+  BATCH_SIZE: 12
+TEST:
+  BATCH_SIZE: 12
+
